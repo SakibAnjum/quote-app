@@ -20,12 +20,11 @@ export class LibraryPage implements OnInit{
     catrgory: string,
     quotes: Quote[],
     icon: string
-  }
+  }[]
 
   ngOnInit(){
     this.quoteCollection = quotes;
   }
-
 
 
 }

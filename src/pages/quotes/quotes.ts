@@ -9,7 +9,7 @@ import {Quote} from "../../data/quote.interface";
   templateUrl: 'quotes.html',
 })
 export class QuotesPage {
-  x:Quote[];
+  data:Quote[];
 
   constructor(
     public navCtrl: NavController,
@@ -19,8 +19,7 @@ export class QuotesPage {
 
 
   ionViewDidLoad(){
-    console.log(this.navParams.get('text'))
-    this.x = this.navParams.data;
+    this.data = this.navParams.data;
 
   }
 

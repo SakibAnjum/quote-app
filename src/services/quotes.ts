@@ -25,7 +25,6 @@ export class QuotesService{
     const pos = this.favouriteQuotes.find((el) => {
       return el.id == quote.id;
     })
-
     return pos;
   }
 

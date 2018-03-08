@@ -51,8 +51,8 @@ export class QuotePage {
     alert.present();
   }
 
-  onRemoveFav(quotes: Quote){
-
+  onRemoveFav(quote: Quote){
+    this.quoteService.removeQuoteToFav(quote);
   }
 
   isFav(quote: Quote){

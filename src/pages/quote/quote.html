@@ -20,7 +20,13 @@
 
       <ion-row>
         <ion-col text-right>
-          <button (tap)="onAddFav(quote)" ion-button small clear="">Favourite</button>
+
+          <button (tap)="onAddFav(quote)" *ngIf="!isFav(quote)" ion-button small clear="">Favourite</button>
+
+          <button (tap)="onRemoveFav(quote)" *ngIf="isFav(quote)"
+                  ion-button small clear color="danger">
+            UnFavourite</button>
+
         </ion-col>
       </ion-row>
     </ion-card>

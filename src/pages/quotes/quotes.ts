@@ -25,8 +25,8 @@ export class QuotesPage {
 
 
 
-  onClose(){
-    this.viewCtrl.dismiss();
+  onClose(remove = false){
+    this.viewCtrl.dismiss(remove);
   }
 
 

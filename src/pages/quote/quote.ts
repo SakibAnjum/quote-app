@@ -51,4 +51,12 @@ export class QuotePage {
     alert.present();
   }
 
+  onRemoveFav(quotes: Quote){
+
+  }
+
+  isFav(quote: Quote){
+    return this.quoteService.findFev(quote);
+  }
+
 }

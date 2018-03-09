@@ -27,16 +27,20 @@ export class FavouritesPage {
 
     modal.onDidDismiss((remove:boolean) => {
       if(remove){
-        this.quoteService.removeQuoteToFav(quote);
-
-        const pos = this.quotes.findIndex((el:Quote) =>{
-          return el.id==quote.id;
-        });
-
-        this.quotes.splice(pos,1);
+        this.removeFromFev(quote);
       }
     });
+  }
 
+
+  removeFromFev(quote: Quote){
+    this.quoteService.removeQuoteToFav(quote);
+
+    const pos = this.quotes.findIndex((el:Quote) =>{
+      return el.id==quote.id;
+    });
+
+    this.quotes.splice(pos,1);
   }
 
 }
